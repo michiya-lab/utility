@@ -38,6 +38,94 @@ TEST(string_editor, split_space)
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+TEST(string_editor, trim_right_char)
+{
+    { //
+        std::string target = "abc";
+        ASSERT_EQ(string_editor::trim_right(target, 'c'), "ab");
+        ASSERT_EQ(string_editor::trim_right(target, 'b'), "abc");
+    } //
+    { // local scope
+        std::string target = "aaabcccc";
+        ASSERT_EQ(string_editor::trim_right(target, 'c'), "aaab");
+        ASSERT_EQ(string_editor::trim_right(target, 'b'), "aaabcccc");
+    } // local scope
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+TEST(string_editor, trim_right_string)
+{
+    { //
+        std::string target = "abc";
+        ASSERT_EQ(string_editor::trim_right(target, "bc"), "a");
+        ASSERT_EQ(string_editor::trim_right(target, "c"), "ab");
+    } //
+    { //
+        std::string target = "asdfbc.csv";
+        ASSERT_EQ(string_editor::trim_right(target, ".csv"), "asdfbc");
+        ASSERT_EQ(string_editor::trim_right(target, "dfbc.csv"), "as");
+    } //
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+TEST(string_editor, trim_left_char)
+{
+    { //
+        std::string target = "abc";
+        ASSERT_EQ(string_editor::trim_left(target, 'a'), "bc");
+        ASSERT_EQ(string_editor::trim_left(target, 'b'), "abc");
+    } //
+    { // local scope
+        std::string target = "aaabcccc";
+        ASSERT_EQ(string_editor::trim_left(target, 'a'), "bcccc");
+        ASSERT_EQ(string_editor::trim_left(target, 'b'), "aaabcccc");
+    } // local scope
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+TEST(string_editor, trim_left_string)
+{
+    { //
+        std::string target = "abc";
+        ASSERT_EQ(string_editor::trim_left(target, "ab"), "c");
+        ASSERT_EQ(string_editor::trim_left(target, "a"), "bc");
+    } //
+    { //
+        std::string target = "asdfbc.csv";
+        ASSERT_EQ(string_editor::trim_left(target, "asdf"), "bc.csv");
+        ASSERT_EQ(string_editor::trim_left(target, "asdfbc.csv"), "");
+    } //
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+TEST(string_editor, trim_both_chara)
+{
+    { //
+        std::string target = "abc";
+        ASSERT_EQ(string_editor::trim_both(target, 'a'), "bc");
+        ASSERT_EQ(string_editor::trim_both(target, 'b'), "abc");
+    } //
+    { //
+        std::string target = "aaabccccaaaa";
+        ASSERT_EQ(string_editor::trim_both(target, 'a'), "bcccc");
+    } //
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+TEST(string_editor, trim_both_string)
+{
+    { //
+        std::string target = "abcabca";
+        ASSERT_EQ(string_editor::trim_both(target, "a"), "bcabc");
+        ASSERT_EQ(string_editor::trim_both(target, "abca"), "bca");
+    } //
+    { //
+        std::string target = "abcabcabc";
+        ASSERT_EQ(string_editor::trim_both(target, "abc"), "abc");
+    } //
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 TEST(string_editor, remove)
 {
     std::string str = "123456789";

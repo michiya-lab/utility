@@ -35,6 +35,20 @@ std::string string_editor::trim_right(const std::string &str, const char &chara)
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+std::string string_editor::trim_right(const std::string &str, const std::string &trim)
+{
+    if (str.size() < trim.size())
+    {
+        return str;
+    } // if
+    if (str.substr(str.size() - trim.size(), trim.size()) == trim)
+    {
+        return str.substr(0, str.size() - trim.size());
+    } // if
+    return str;
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 std::string string_editor::trim_left(const std::string &str, const char &chara)
 {
     std::string ret;
@@ -54,9 +68,29 @@ std::string string_editor::trim_left(const std::string &str, const char &chara)
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+std::string string_editor::trim_left(const std::string &str, const std::string &trim)
+{
+    if (str.size() < trim.size())
+    {
+        return str;
+    } // if
+    if (str.substr(0, trim.size()) == trim)
+    {
+        return str.substr(trim.size());
+    } // if
+    return str;
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 std::string string_editor::trim_both(const std::string &str, const char &chara)
 {
     return string_editor::trim_right(string_editor::trim_left(str, chara), chara);
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+std::string string_editor::trim_both(const std::string &str, const std::string &trim)
+{
+    return string_editor::trim_right(string_editor::trim_left(str, trim), trim);
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

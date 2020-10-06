@@ -13,8 +13,11 @@ public:
     virtual ~string_editor() { ; }
     static std::vector<std::string> split(const std::string &, const char &);
     static std::string trim_right(const std::string &, const char &);
+    static std::string trim_right(const std::string &, const std::string &);
     static std::string trim_left(const std::string &, const char &);
+    static std::string trim_left(const std::string &, const std::string &);
     static std::string trim_both(const std::string &, const char &);
+    static std::string trim_both(const std::string &, const std::string &);
     static std::string remove(const std::string &, const char &);
 
 private:

@@ -38,4 +38,6 @@ add_test(
     COMMAND ${PROJECT_NAME}
     )
 
-add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} --verbose)
+add_custom_target(check
+COMMAND ${CMAKE_CTEST_COMMAND} --verbose
+DEPENDS ${PROJECT_NAME})

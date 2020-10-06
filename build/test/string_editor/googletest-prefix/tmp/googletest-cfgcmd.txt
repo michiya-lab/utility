@@ -1,0 +1,1 @@
+cmd='/opt/cmake-3.17.2/bin/cmake;-DCMAKE_INSTALL_PREFIX=/home/imachi/work_space/git_workspace/std_string_wapper/build/googletest;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

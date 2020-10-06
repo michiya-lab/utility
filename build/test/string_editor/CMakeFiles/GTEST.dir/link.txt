@@ -1,0 +1,1 @@
+/opt/llvm.gcc/bin/clang++  -O3 -DNDEBUG   CMakeFiles/GTEST.dir/test_string_editor.cpp.o  -o GTEST   -L/home/imachi/work_space/git_workspace/std_string_wapper/build/googletest/lib  -Wl,-rpath,/home/imachi/work_space/git_workspace/std_string_wapper/build/googletest/lib -lgtest -lgtest_main -lpthread ../../src/libstring_editor.a 
