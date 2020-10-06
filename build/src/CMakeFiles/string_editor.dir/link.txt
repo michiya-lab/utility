@@ -1,2 +1,0 @@
-/usr/bin/ar qc libstring_editor.a  CMakeFiles/string_editor.dir/string_editor.cpp.o
-/usr/bin/ranlib libstring_editor.a
