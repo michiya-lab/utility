@@ -1,4 +1,4 @@
-# std_string_wrapper
+# Installation
 
 ```bash
 mkdir build
