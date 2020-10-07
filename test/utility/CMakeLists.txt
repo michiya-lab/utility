@@ -18,4 +18,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main pthread utility)
 add_test(
     NAME TEST_UTILITY
     COMMAND ${PROJECT_NAME}
-    )
+)
+set_tests_properties(TEST_UTILITY PROPERTIES TIMEOUT 1)

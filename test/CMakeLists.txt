@@ -17,6 +17,7 @@ set(GOOGLETEST_ROOT ${GOOGLETEST_INSTALL_DESTINATION})
 
 add_subdirectory(utility)
 add_subdirectory(string_editor)
+add_subdirectory(datatype_converter)
 
 add_custom_target(
     check

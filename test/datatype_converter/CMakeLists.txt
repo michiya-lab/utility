@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(GTEST_string_editor CXX)
+project(GTEST_DATATYPE_CONVETER CXX)
 
 file(GLOB SOURCE "*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCE})
@@ -17,7 +17,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main pthread utility)
 
 
 add_test(
-    NAME TEST_STRING_EDITOR
+    NAME TEST_DATATYPE_CONVETER
     COMMAND ${PROJECT_NAME}
     )
-set_tests_properties(TEST_STRING_EDITOR PROPERTIES TIMEOUT 1)
+set_tests_properties(TEST_DATATYPE_CONVETER PROPERTIES TIMEOUT 1)
