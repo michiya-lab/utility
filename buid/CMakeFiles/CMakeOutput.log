@@ -1,0 +1,200 @@
+The system is: Linux - 4.4.0-178-generic - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/llvm.gcc/bin/clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/3.17.2/CompilerIdCXX/a.out"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_da46a/fast && /usr/bin/make  -f CMakeFiles/cmTC_da46a.dir/build.make CMakeFiles/cmTC_da46a.dir/build
+make[1]: ディレクトリ '/home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp' に入ります
+Building CXX object CMakeFiles/cmTC_da46a.dir/testCXXCompiler.cxx.o
+/opt/llvm.gcc/bin/clang++     -o CMakeFiles/cmTC_da46a.dir/testCXXCompiler.cxx.o -c /home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_da46a
+/opt/cmake-3.17.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da46a.dir/link.txt --verbose=1
+/opt/llvm.gcc/bin/clang++       CMakeFiles/cmTC_da46a.dir/testCXXCompiler.cxx.o  -o cmTC_da46a 
+make[1]: ディレクトリ '/home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp' から出ます
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_819ab/fast && /usr/bin/make  -f CMakeFiles/cmTC_819ab.dir/build.make CMakeFiles/cmTC_819ab.dir/build
+make[1]: Entering directory '/home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o
+/opt/llvm.gcc/bin/clang++    -v -o CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake-3.17.2/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp
+clang version 11.0.0 (https://github.com/llvm/llvm-project.git b3ca4f34311b87345cf87bfdd0343045eed22f5c)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/llvm.gcc/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.0.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/opt/llvm.gcc/bin/clang-11" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /opt/llvm.gcc/lib/clang/11.0.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward -internal-isystem /usr/local/include -internal-isystem /opt/llvm.gcc/lib/clang/11.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -o CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/cmake-3.17.2/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 11.0.0 based upon LLVM 11.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0
+ /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0
+ /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward
+ /usr/local/include
+ /opt/llvm.gcc/lib/clang/11.0.0/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_819ab
+/opt/cmake-3.17.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_819ab.dir/link.txt --verbose=1
+/opt/llvm.gcc/bin/clang++      -v CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_819ab 
+clang version 11.0.0 (https://github.com/llvm/llvm-project.git b3ca4f34311b87345cf87bfdd0343045eed22f5c)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/llvm.gcc/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.0.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/bin/ld" -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_819ab /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/opt/llvm.gcc/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward]
+    add: [/usr/local/include]
+    add: [/opt/llvm.gcc/lib/clang/11.0.0/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0] ==> [/usr/include/c++/5.4.0]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0] ==> [/usr/include/x86_64-linux-gnu/c++/5.4.0]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward] ==> [/usr/include/c++/5.4.0/backward]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/opt/llvm.gcc/lib/clang/11.0.0/include] ==> [/opt/llvm.gcc/lib/clang/11.0.0/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/include/c++/5.4.0;/usr/include/x86_64-linux-gnu/c++/5.4.0;/usr/include/c++/5.4.0/backward;/usr/local/include;/opt/llvm.gcc/lib/clang/11.0.0/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_819ab/fast && /usr/bin/make  -f CMakeFiles/cmTC_819ab.dir/build.make CMakeFiles/cmTC_819ab.dir/build]
+  ignore line: [make[1]: Entering directory '/home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/llvm.gcc/bin/clang++    -v -o CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o -c /opt/cmake-3.17.2/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang version 11.0.0 (https://github.com/llvm/llvm-project.git b3ca4f34311b87345cf87bfdd0343045eed22f5c)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/llvm.gcc/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.0.0]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ (in-process)]
+  ignore line: [ "/opt/llvm.gcc/bin/clang-11" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /opt/llvm.gcc/lib/clang/11.0.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward -internal-isystem /usr/local/include -internal-isystem /opt/llvm.gcc/lib/clang/11.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/imachi/work_space/git_workspace/clone/utility/buid/CMakeFiles/CMakeTmp -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -o CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/cmake-3.17.2/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 11.0.0 based upon LLVM 11.0.0git default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/x86_64-linux-gnu/c++/5.4.0]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../include/c++/5.4.0/backward]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /opt/llvm.gcc/lib/clang/11.0.0/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_819ab]
+  ignore line: [/opt/cmake-3.17.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_819ab.dir/link.txt --verbose=1]
+  ignore line: [/opt/llvm.gcc/bin/clang++      -v CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_819ab ]
+  ignore line: [clang version 11.0.0 (https://github.com/llvm/llvm-project.git b3ca4f34311b87345cf87bfdd0343045eed22f5c)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/llvm.gcc/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.0.0]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_819ab /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/opt/llvm.gcc/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_819ab] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5.4.0] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../..]
+    arg [-L/opt/llvm.gcc/bin/../lib] ==> dir [/opt/llvm.gcc/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_819ab.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0] ==> [/usr/lib/gcc/x86_64-linux-gnu/5.4.0]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../..] ==> [/usr/lib]
+  collapse library dir [/opt/llvm.gcc/bin/../lib] ==> [/opt/llvm.gcc/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5.4.0;/usr/lib/x86_64-linux-gnu;/lib/x86_64-linux-gnu;/lib64;/usr/lib;/opt/llvm.gcc/lib;/lib]
+  implicit fwks: []
+
+

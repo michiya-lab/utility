@@ -1,0 +1,79 @@
+Start testing: Oct 07 15:55 JST
+----------------------------------------------------------
+1/2 Testing: TEST_UTILITY
+1/2 Test: TEST_UTILITY
+Command: "/home/imachi/work_space/git_workspace/clone/utility/buid/test/utility/GTEST_utility"
+Directory: /home/imachi/work_space/git_workspace/clone/utility/buid/test/utility
+"TEST_UTILITY" start time: Oct 07 15:55 JST
+Output:
+----------------------------------------------------------
+Running main() from /home/imachi/work_space/git_workspace/clone/utility/buid/test/googletest-prefix/src/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UTILITY
+[ RUN      ] UTILITY.is_number
+/home/imachi/work_space/git_workspace/clone/utility/test/utility/utility.cpp:11: Failure
+Value of: utility::is_number("1.2a")
+  Actual: false
+Expected: true
+[  FAILED  ] UTILITY.is_number (0 ms)
+[----------] 1 test from UTILITY (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] UTILITY.is_number
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"TEST_UTILITY" end time: Oct 07 15:55 JST
+"TEST_UTILITY" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: TEST_STRING_EDITOR
+2/2 Test: TEST_STRING_EDITOR
+Command: "/home/imachi/work_space/git_workspace/clone/utility/buid/test/string_editor/GTEST_string_editor"
+Directory: /home/imachi/work_space/git_workspace/clone/utility/buid/test/string_editor
+"TEST_STRING_EDITOR" start time: Oct 07 15:55 JST
+Output:
+----------------------------------------------------------
+Running main() from /home/imachi/work_space/git_workspace/clone/utility/buid/test/googletest-prefix/src/googletest/googletest/src/gtest_main.cc
+[==========] Running 9 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 9 tests from string_editor
+[ RUN      ] string_editor.split_comma
+[       OK ] string_editor.split_comma (0 ms)
+[ RUN      ] string_editor.split_space
+[       OK ] string_editor.split_space (0 ms)
+[ RUN      ] string_editor.trim_right_char
+[       OK ] string_editor.trim_right_char (0 ms)
+[ RUN      ] string_editor.trim_right_string
+[       OK ] string_editor.trim_right_string (0 ms)
+[ RUN      ] string_editor.trim_left_char
+[       OK ] string_editor.trim_left_char (0 ms)
+[ RUN      ] string_editor.trim_left_string
+[       OK ] string_editor.trim_left_string (0 ms)
+[ RUN      ] string_editor.trim_both_chara
+[       OK ] string_editor.trim_both_chara (0 ms)
+[ RUN      ] string_editor.trim_both_string
+[       OK ] string_editor.trim_both_string (0 ms)
+[ RUN      ] string_editor.remove
+[       OK ] string_editor.remove (0 ms)
+[----------] 9 tests from string_editor (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 9 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TEST_STRING_EDITOR" end time: Oct 07 15:55 JST
+"TEST_STRING_EDITOR" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 07 15:55 JST
