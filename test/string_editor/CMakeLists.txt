@@ -24,7 +24,7 @@ add_executable(${PROJECT_NAME} ${SOURCE})
 target_include_directories(
     ${PROJECT_NAME}
     PRIVATE ${GOOGLETEST_ROOT}/include
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../src
+    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../src/string_editor
 )
 target_link_directories(
     ${PROJECT_NAME}
