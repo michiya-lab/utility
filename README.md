@@ -3,8 +3,8 @@
 ```bash
 mkdir build
 cd build
-cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=${HOME}/util ..
+cmake -DCMAKE_INSTALL_PREFIX=/path/to/install -DBUILD_SHARED_LIBS=ON  -DBUILD_EXAMPLES=ON -DBUILD_TESTING=ON ..
 make
-make test
+make check
 make install
 ```
