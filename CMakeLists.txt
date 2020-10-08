@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.17)
 
-PROJECT(STD_STRING_WAPPER CXX)
+PROJECT(UTILITY CXX)
 add_subdirectory(src)
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 option (BUILD_TESTING "Build the testing tree." ON)

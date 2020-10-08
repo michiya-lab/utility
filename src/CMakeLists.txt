@@ -52,7 +52,12 @@ foreach(subdir IN LISTS LISTS_DIR)
 endforeach()
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-add_library(${PROJECT_NAME} ${SOURCE})
+if(DEFINED BUILD_SHARED_LIBS)
+  add_library(${PROJECT_NAME} ${SOURCE})
+else()
+  add_library(${PROJECT_NAME} SHARED ${SOURCE})
+endif()
+
 target_include_directories(
     ${PROJECT_NAME}
     PRIVATE ${LISTS_DIR}
