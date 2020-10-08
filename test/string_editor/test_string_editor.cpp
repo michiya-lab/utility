@@ -8,17 +8,35 @@
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 TEST(string_editor, split_comma)
 {
-    std::string target = "mafiweo,faoeijaowie,ffaoiem,,efaiwweo,,,,";
-    auto splited_target = michiya::utility::string_editor::split(target, ',');
-    ASSERT_EQ(splited_target.size(), 8);
-    ASSERT_EQ(splited_target[0], "mafiweo");
-    ASSERT_EQ(splited_target[1], "faoeijaowie");
-    ASSERT_EQ(splited_target[2], "ffaoiem");
-    ASSERT_EQ(splited_target[3], "");
-    ASSERT_EQ(splited_target[4], "efaiwweo");
-    ASSERT_EQ(splited_target[5], "");
-    ASSERT_EQ(splited_target[6], "");
-    ASSERT_EQ(splited_target[7], "");
+    { // case 1
+        std::string target = "a,b,c";
+        auto splited_target = michiya::utility::string_editor::split(target, ',');
+        ASSERT_EQ(splited_target.size(), 3);
+        ASSERT_EQ(splited_target[0], "a");
+        ASSERT_EQ(splited_target[1], "b");
+        ASSERT_EQ(splited_target[2], "c");
+    } // case 1
+    { // case 2
+        std::string target = "a,b,c,";
+        auto splited_target = michiya::utility::string_editor::split(target, ',');
+        ASSERT_EQ(splited_target.size(), 3);
+        ASSERT_EQ(splited_target[0], "a");
+        ASSERT_EQ(splited_target[1], "b");
+        ASSERT_EQ(splited_target[2], "c");
+    } // case 2
+    { // case 3
+        std::string target = "mafiweo,faoeijaowie,ffaoiem,,efaiwweo,,,,";
+        auto splited_target = michiya::utility::string_editor::split(target, ',');
+        ASSERT_EQ(splited_target.size(), 8);
+        ASSERT_EQ(splited_target[0], "mafiweo");
+        ASSERT_EQ(splited_target[1], "faoeijaowie");
+        ASSERT_EQ(splited_target[2], "ffaoiem");
+        ASSERT_EQ(splited_target[3], "");
+        ASSERT_EQ(splited_target[4], "efaiwweo");
+        ASSERT_EQ(splited_target[5], "");
+        ASSERT_EQ(splited_target[6], "");
+        ASSERT_EQ(splited_target[7], "");
+    } // case 3
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
