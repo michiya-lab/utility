@@ -45,23 +45,23 @@ endforeach()
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 if(DEFINED BUILD_SHARED_LIBS)
-  add_library(${PROJECT_NAME} ${SOURCE})
+  add_library(${UTILITY_LIB} ${SOURCE})
 else()
-  add_library(${PROJECT_NAME} SHARED ${SOURCE})
+  add_library(${UTILITY_LIB} SHARED ${SOURCE})
 endif()
 
 target_include_directories(
-    ${PROJECT_NAME}
-    PRIVATE ${LISTS_DIR}
+    ${UTILITY_LIB}
+    PRIVATE ${UTILITY_INCLUDE}
 )
 set_target_properties(
-    ${PROJECT_NAME}
+    ${UTILITY_LIB}
     PROPERTIES
     PUBLIC_HEADER "${HEADER}"
   )
 install(
-    TARGETS ${PROJECT_NAME}
-    EXPORT ${PROJECT_NAME}
+    TARGETS ${UTILITY_LIB}
+    EXPORT ${UTILITY_LIB}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
     LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_PREFIX}/include

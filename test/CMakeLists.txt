@@ -22,6 +22,9 @@ ExternalProject_Add(
 )
 
 set(GOOGLETEST_ROOT ${GOOGLETEST_INSTALL_DESTINATION})
+set(GOOGLETEST_INCLUDE_DIR ${GOOGLETEST_ROOT}/include)
+set(GOOGLETEST_LIBRARY_DIR ${GOOGLETEST_ROOT}/lib)
+set(GOOGLETEST_LIB gtest;gtest_main;pthread)
 
 # find_package(
     # GTest REQUIRED

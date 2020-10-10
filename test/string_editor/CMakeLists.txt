@@ -6,15 +6,18 @@ file(GLOB SOURCE "*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCE})
 target_include_directories(
     ${PROJECT_NAME}
-    PRIVATE ${GOOGLETEST_ROOT}/include
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../src
+    PRIVATE ${GOOGLETEST_INCLUDE_DIR}
+    PRIVATE ${UTILITY_INCLUDE}
 )
 target_link_directories(
     ${PROJECT_NAME}
-    PRIVATE ${GOOGLETEST_ROOT}/lib
+    PRIVATE ${GOOGLETEST_LIBRARY_DIR}
 )
-target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main pthread utility)
-
+target_link_libraries(
+    ${PROJECT_NAME}
+    PRIVATE ${GOOGLETEST_LIB}
+    PRIVATE ${UTILITY_LIB}
+)
 
 add_test(
     NAME TEST_STRING_EDITOR
