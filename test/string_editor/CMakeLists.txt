@@ -7,7 +7,7 @@ add_executable(${PROJECT_NAME} ${SOURCE})
 target_include_directories(
     ${PROJECT_NAME}
     PRIVATE ${GOOGLETEST_INCLUDE_DIR}
-    PRIVATE ${UTILITY_INCLUDE}
+    PRIVATE ${UTILITY_INCLUDE_DIR}
 )
 target_link_directories(
     ${PROJECT_NAME}

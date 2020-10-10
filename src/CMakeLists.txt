@@ -52,7 +52,7 @@ endif()
 
 target_include_directories(
     ${UTILITY_LIB}
-    PRIVATE ${UTILITY_INCLUDE}
+    PRIVATE ${UTILITY_INCLUDE_DIR}
 )
 set_target_properties(
     ${UTILITY_LIB}
