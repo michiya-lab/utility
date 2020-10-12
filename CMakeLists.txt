@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 
 PROJECT(UTILITY CXX)
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/module.cmake")
-include(utility)
+
 add_subdirectory(src)
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<f
 # example
@@ -11,7 +10,7 @@ if(BUILD_EXAMPLES)
 endif()
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-# example
+# test
 if (BUILD_TESTING)
     enable_testing()
     add_subdirectory(test)

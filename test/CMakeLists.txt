@@ -1,3 +1,5 @@
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../module.cmake")
+include(utility)
 # default configration
 set(execute_filename "exe")
 set(CMAKE_VERBOSE_MAKEFILE on)

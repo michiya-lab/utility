@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
 
 PROJECT(utility_example CXX)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../module.cmake")
+include(utility)
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 # default configration
 set(execute_filename "exe")
@@ -18,5 +20,11 @@ set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeR
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 add_executable(example example.cpp)
-target_include_directories(example PRIVATE ${CMAKE_SOURCE_DIR}/src)
-target_link_libraries(example PRIVATE utility)
+target_include_directories(
+  example
+  PRIVATE ${UTILITY_INCLUDE_DIR}
+)
+target_link_libraries(
+  example
+  PRIVATE ${UTILITY_LIB}
+)
