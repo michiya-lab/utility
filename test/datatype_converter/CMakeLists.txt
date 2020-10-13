@@ -4,23 +4,16 @@ project(GTEST_DATATYPE_CONVETER CXX)
 
 file(GLOB SOURCE "*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCE})
-target_include_directories(
-    ${PROJECT_NAME}
-    PRIVATE ${GOOGLETEST_INCLUDE_DIR}
-    PRIVATE ${UTILITY_INCLUDE_DIR}
-)
-target_link_directories(
-    ${PROJECT_NAME}
-    PRIVATE ${GOOGLETEST_LIBRARY_DIR}
-)
-target_link_libraries(
-    ${PROJECT_NAME}
-    PRIVATE ${GOOGLETEST_LIB}
-    PRIVATE ${UTILITY_LIB}
-)
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# include
+include("${CMAKE_CURRENT_SOURCE_DIR}/../../module.cmake/utility.cmake")
+LOAD_SETTING_UTILITY_MODULE(${PROJECT_NAME})
+include("${CMAKE_CURRENT_SOURCE_DIR}/../../module.cmake/googletest.cmake")
+LOAD_SETTING_GOOGLETEST_MODULE(${PROJECT_NAME})
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 add_test(
     NAME TEST_DATATYPE_CONVETER
-    COMMAND ${PROJECT_NAME}
+    COMMAND ${PROJECT_NAME} --gtest_output=xml:
     )
 set_tests_properties(TEST_DATATYPE_CONVETER PROPERTIES TIMEOUT 1)
