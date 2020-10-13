@@ -10,6 +10,6 @@ cmake \
 -DBUILD_TESTING=ON \
 ..
 make
-make check
+make test
 make install
 ```
