@@ -1,0 +1,56 @@
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+macro(LOAD_MY_CONFIG)
+    if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/mylib" CACHE PATH "..." FORCE)
+    endif()
+    set(EXE_NAME "exe")
+    set(CMAKE_VERBOSE_MAKEFILE on)
+    if(NOT CMAKE_CXX_STANDARD)
+      set(CMAKE_CXX_STANDARD 14)
+    endif()
+    set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wpedantic -Werror")
+    set(CMAKE_CXX_FLAGS_RELEASE "-Ofast -DNDEBUG -march=native -mtune=native")
+    set(CMAKE_CXX_FLAGS_DEBUG "-g")
+    if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+      set(CMAKE_BUILD_TYPE "Release" CACHE STRING "choose build type" FORCE)
+    endif()
+    set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
+endmacro()
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function(CHECK_DIRECTORIES_EXIST MACRO_ARG)
+    foreach(i IN LISTS ${MACRO_ARG})
+      if(NOT EXISTS ${i})
+        message(FATAL_ERROR "\n could not found: ${i}")
+      endif()
+    endforeach()
+endfunction()
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function(FIND_CPP MACRO_ARG1 MACRO_ARG2)
+    set(list ${MACRO_ARG2})
+    foreach(dir IN LISTS list)
+        file(GLOB temp "${dir}/*cpp")
+        list(APPEND temp_list ${temp})
+    endforeach()
+    set(${MACRO_ARG1} ${temp_list} PARENT_SCOPE)
+endfunction()
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function(FIND_HPP MACRO_ARG1 MACRO_ARG2)
+    set(list ${MACRO_ARG2})
+    foreach(dir IN LISTS list)
+        file(GLOB temp "${dir}/*.hpp")
+    endforeach()
+    set(${MACRO_ARG1} ${temp} PARENT_SCOPE)
+endfunction()
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+macro(DEFINE_ADD_LIBRARY MACRO_ARG1 MACRO_ARG2)
+    if(DEFINED BUILD_SHARED_LIBS)
+      add_library(${MACRO_ARG1} ${MACRO_ARG2})
+    else()
+      add_library(${MACRO_ARG1} SHARED ${MACRO_ARG2})
+    endif()
+endmacro()
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

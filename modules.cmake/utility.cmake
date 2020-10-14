@@ -5,8 +5,20 @@ set_property(GLOBAL PROPERTY PATH_UTILITY_MODULE "${CMAKE_CURRENT_LIST_DIR}")
 macro(SET_UTILITY_VARIABLES)
     get_property(my_module_path GLOBAL PROPERTY PATH_UTILITY_MODULE)
     if(NOT DEFINED UTILITY_LIB_NAME)
+        get_property(
+            my_module_path
+            GLOBAL PROPERTY
+            PATH_UTILITY_MODULE
+            )
         set(UTILITY_LIB_NAME "michiya_utility")
-        set(UTILITY_INCLUDE_DIR "${my_module_path}/../src/")
+        set(
+            UTILITY_SOURCE_DIR
+            "${my_module_path}/../src/"
+            )
+        set(
+            UTILITY_INCLUDE_DIR
+            "${my_module_path}/../src/"
+            )
     endif()
 endmacro()
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

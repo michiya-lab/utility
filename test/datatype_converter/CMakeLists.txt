@@ -6,9 +6,9 @@ file(GLOB SOURCE "*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCE})
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 # include
-include("${CMAKE_CURRENT_SOURCE_DIR}/../../module.cmake/utility.cmake")
+include("${CMAKE_CURRENT_SOURCE_DIR}/../../modules.cmake/utility.cmake")
 LOAD_SETTING_UTILITY_MODULE(${PROJECT_NAME})
-include("${CMAKE_CURRENT_SOURCE_DIR}/../../module.cmake/googletest.cmake")
+include("${CMAKE_CURRENT_SOURCE_DIR}/../../modules.cmake/googletest.cmake")
 LOAD_SETTING_GOOGLETEST_MODULE(${PROJECT_NAME})
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
