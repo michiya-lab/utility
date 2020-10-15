@@ -17,6 +17,7 @@ macro(fetch_googletesst)
         ExternalProject_Add(
             EXTERNAL_GOOGLETEST_PROJECT
             GIT_REPOSITORY https://github.com/google/googletest
+            GIT_TAG release-1.10.0
             CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${GOOGLETEST_INSTALL_DESTINATION}
         )
     endif()
